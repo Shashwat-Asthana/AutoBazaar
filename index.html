@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoBazaar</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- for brevo -->
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <a href="#" class="logo" style="position: fixed;"><span>Auto</span>Bazaar</a>
+        <div id="menu-btn" class="fas fa-bars" style="position: fixed;"></div>
+        <div id="login-btn">
+          <button class="btn">sign up</button>
+          <i class="far fa-user" id="user"></i>
+      </div>
+    </header>
+    
+    <!-- <div id="menu-btn" class="fas fa-bars" style="position: fixed;"></div> -->
+    <!-- navbar section -->
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">featured</a>
+        <a href="#reviews">reviews</a>
+        <a href="#contact">contact</a>
+    </nav>
+        
+    <div class="login-form-container">
+      <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM000004Tbqx" method="POST" class="form-container">
+        
+        <i class="fa fa-times" aria-hidden="true" id="backNow" style="font-size: 3rem; color: rgb(58, 96, 109); float: right; cursor: pointer;"></i>
+        <h3>Sign Up</h3>
+        
+        <input type="hidden" name="oid" value="00DdM000004Tbqx">
+        <input type="hidden" name="retURL" value="https://thankyou-lead.netlify.app/">
+
+        <!-- Salesforce Web-to-Lead form fields -->
+        <label for="first_name"></label>
+        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" class="box" required>
+
+        <label for="last_name"></label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name" class="box">
+
+        <label for="email"></label>
+        <input id="email" maxlength="80" name="email" size="20" type="email" placeholder="Email" class="box" style="text-transform: none;" required>
+
+        <label for="phone"></label>
+        <input id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="Phone Number" class="box">
+
+        <!-- Removed description field as per your example -->
+
+        <input type="submit" name="submit" value="Sign Up" class="btn-1">
+    </form>
+  </div>
+  
+
+    <div class="video-container-1">
+        <video autoplay muted loop id="video-bg">
+            <source src="backVid2.mp4" type="video/mp4">
+            <!-- You can add more <source> tags for different video formats like WebM, etc. -->
+            
+        </video>
+        
+    </div>
+    
+    <!-- home section starts -->
+     <section class="home" id="home">
+        <h1 class="home-parallax" data-speed="-2">Drive Your Dreams</h1>
+        <img src="banner-1.png" alt="" class="home-parallax" data-speed="5">
+        <a href="#featured" class="btn-2 home-parallax" data-speed="7">Browse Cars</a>
+     </section>
+     <!-- home section ends -->
+
+     <!-- icons section -->
+      <section class="icons-container">
+        <div class="icon">
+            <i class="fas fa-home"></i>
+            <div class="content">
+                <h3>100+</h3>
+                <p>Branches</p>
+            </div>
+        </div>
+        <div class="icon">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>1500+</h3>
+                <p>Cars</p>
+            </div>
+        </div>
+        <div class="icon">
+            <i class="fas fa-user"></i>
+            <div class="content">
+                <h3>470+</h3>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+        <div class="icon">
+            <i class="fas fa-plus-circle"></i>
+            <div class="content">
+                <h3>300+</h3>
+                <p>New Cars</p>
+            </div>
+        </div>
+      </section>
+      
+      <!-- vehicles section -->
+      <!-- vehicles section -->
+<section class="vehicles" id="vehicles">
+    <h1 class="heading" style="padding-top: 50px;">New <span>Arrivals</span></h1>
+    <div class="swiper vehicles-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box" style="padding-top: 5rem;">
+          <img src="car-1.png" alt="">
+          <div class="content">
+            <h3>Bugatti Chiron</h3>
+            <div class="price"><span>Price: </span>$3,300,000/-</div>
+            <p>
+              new
+              <span class="fas fa-circle"></span> 2022
+              <span class="fas fa-circle"></span> automatic
+              <span class="fas fa-circle"></span> petrol
+              <span class="fas fa-circle"></span> 420 kmph
+            </p>
+            <a href="" class="btn-2 get-quote-btn" data-model-id="model-1"> Get a Qoute</a>
+          </div>
+        </div>
+        <div class="swiper-slide box" style="padding-top: 5rem;">
+          <img src="car-2.png" alt="">
+          <div class="content">
+            <h3>Ferrari SF90 Stradale</h3>
+            <div class="price"><span>Price: </span>$625,000/-</div>
+            <p>
+              new
+              <span class="fas fa-circle"></span> 2022
+              <span class="fas fa-circle"></span> automatic
+              <span class="fas fa-circle"></span> hybrid
+              <span class="fas fa-circle"></span> 340 kmph
+            </p>
+            <a href="" class="btn-2 get-quote-btn" data-model-id="model-2">Get a Qoute</a>
+          </div>
+        </div>
+        <div class="swiper-slide box" style="padding-top: 3.5rem;">
+          <img src="car-3.png" alt="">
+          <div class="content">
+            <h3>McLaren 720S</h3>
+            <div class="price"><span>Price: </span>$299,000/-</div>
+            <p>
+              new
+              <span class="fas fa-circle"></span> 2022
+              <span class="fas fa-circle"></span> automatic
+              <span class="fas fa-circle"></span> petrol
+              <span class="fas fa-circle"></span> 341 kmph
+            </p>
+            <a href="" class="btn-2 get-quote-btn" data-model-id="model-3">Get a Qoute</a>
+          </div>
+        </div>
+        <div class="swiper-slide box" style="padding-top: -2rem;">
+          <img src="car-4.png" alt="">
+          <div class="content">
+            <h3>Lamborghini Aventador</h3>
+            <div class="price"><span>Price: </span>$393,695/-</div>
+            <p>
+              new
+              <span class="fas fa-circle"></span> 2022
+              <span class="fas fa-circle"></span> automatic
+              <span class="fas fa-circle"></span> petrol
+              <span class="fas fa-circle"></span> 350 kmph
+            </p>
+            <a href="" class="btn-2 get-quote-btn" data-model-id="model-4">Get a Qoute</a>
+          </div>
+        </div>
+        <div class="swiper-slide box" style="padding-top: 7.5rem;">
+          <img src="car-5.png" alt="">
+          <div class="content">
+            <h3>Porsche 911 Turbo S</h3>
+            <div class="price"><span>Price: </span>$207,000/-</div>
+            <p>
+              new
+              <span class="fas fa-circle"></span> 2022
+              <span class="fas fa-circle"></span> automatic
+              <span class="fas fa-circle"></span> petrol
+              <span class="fas fa-circle"></span> 330 kmph
+            </p>
+            <a href="" class="btn-2 get-quote-btn" data-model-id="model-5">Get a Qoute</a>
+          </div>
+        </div>
+        <div class="swiper-slide box" style="padding-top: 9.9rem;">
+          <img src="car-6.png" alt="">
+          <div class="content">
+            <h3>Aston Martin Valkyrie</h3>
+            <div class="price"><span>Price: </span>$3,000,000/-</div>
+            <p>
+              new
+              <span class="fas fa-circle"></span> 2022
+              <span class="fas fa-circle"></span> automatic
+              <span class="fas fa-circle"></span> hybrid
+              <span class="fas fa-circle"></span> 402 kmph
+            </p>
+            <a href="" class="btn-2 get-quote-btn" data-model-id="model-6">Get a Qoute</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- services section -->
+   <section class="services" id="services">
+    <h1 class="heading" style="padding-top: 50px;">Our <span>Services</span></h1>
+    <div class="box-container">
+      <div class="box">
+          <i class="fas fa-car"></i>
+          <h3>Car Selling</h3>
+          <p>Explore our collection of luxury and supercars. Find the car of your dreams with AutoBazaar.</p>
+      </div>
+  
+      <div class="box">
+          <i class="fas fa-tools"></i>
+          <h3>Parts Repair</h3>
+          <p>Expert repair services for your vehicle's parts. We ensure quality repairs to keep your car running smoothly.</p>
+      </div>
+  
+      <div class="box">
+          <i class="fas fa-car-crash"></i>
+          <h3>Car Insurance</h3>
+          <p>Protect your investment with comprehensive car insurance plans tailored to your needs.</p>
+      </div>
+  
+      <div class="box">
+          <i class="fas fa-car-battery"></i>
+          <h3>Oil Change</h3>
+          <p>Maintain peak performance with our professional oil change services. Keep your engine in top condition.</p>
+      </div>
+  
+      <div class="box">
+          <i class="fas fa-car-battery"></i>
+          <h3>Battery Replacement</h3>
+          <p>Replace your car's battery with high-quality options. Ensure reliable starting power in any situation.</p>
+      </div>
+  
+      <div class="box">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Our dedicated support team is available round the clock to assist you with any inquiries or issues.</p>
+      </div>
+  </div>
+  
+   </section>
+
+   <!-- featured section -->
+<section class="featured" id="featured">
+    <h1 class="heading" style="padding-top: 50px;">Featured <span>Cars</span></h1>
+    <div class="swiper featured-slider">
+      <div class="swiper-wrapper">
+  
+        <div class="swiper-slide box">
+          <img src="car-1.png" alt="">
+          <h3>Bugatti Chiron</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">$3,300,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-1">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-2.png" alt="">
+          <h3>Ferrari SF90 Stradale</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$625,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-2">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-3.png" alt="">
+          <h3>McLaren 720S</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">$299,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-3">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-4.png" alt="">
+          <h3>Lamborghini Aventador</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$393,695/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-4">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-5.png" alt="">
+          <h3>Porsche 911 Turbo S</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$207,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-5">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-6.png" alt="">
+          <h3>Aston Martin Valkyrie</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$3,000,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-6">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-7.png" alt="">
+          <h3>Koenigsegg Jesko</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">$3,000,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-7">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-8.png" alt="">
+          <h3>Pagani Huayra</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$2,600,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-8">Get a Qoute</a>
+        </div>
+  
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  
+    <!-- again same section here we go-->
+    <div class="swiper featured-slider">
+      <div class="swiper-wrapper">
+  
+        <div class="swiper-slide box">
+          <img src="car-8.png" alt="">
+          <h3>Pagani Huayra</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$2,600,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-8">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-7.png" alt="">
+          <h3>Koenigsegg Jesko</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">$3,000,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-7">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-6.png" alt="">
+          <h3>Aston Martin Valkyrie</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$3,000,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-6">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-5.png" alt="">
+          <h3>Porsche 911 Turbo S</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$207,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-5">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-4.png" alt="">
+          <h3>Lamborghini Aventador</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$393,695/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-4">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-3.png" alt="">
+          <h3>McLaren 720S</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">$299,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-3">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-2.png" alt="">
+          <h3>Ferrari SF90 Stradale</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">$625,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-2">Get a Qoute</a>
+        </div>
+  
+        <div class="swiper-slide box">
+          <img src="car-1.png" alt="">
+          <h3>Bugatti Chiron</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">$3,300,000/-</div>
+          <a href="#" class="btn-2 get-quote-btn" data-model-id="model-1">Get a Qoute</a>
+        </div>
+  
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- qoute form for the vehicle buying -->
+  <section class="quote" id="quote-form">
+    <video id="background-video" autoplay muted loop>
+      <source src="formVid2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+    <div >
+      
+      <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM000004Tbqx" method="POST" id="quote-form-content">
+        <input type="hidden" name="oid" value="00DdM000004Tbqx">
+        <input type="hidden" name="retURL" value="https://thankyou-lead.netlify.app/">
+
+        <!-- Form fields -->
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required>
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="email" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+
+        <label for="modelId">Model ID</label>
+        <input id="modelId" maxlength="20" name="00NdM000003nBtR" size="20" type="text">
+
+        <button type="submit" class="btn-2">Submit</button>
+    </form>
+    </div>
+  </section>
+  
+  <!-- Customer Support Section  -->
+  <h1 class="heading" style="padding-top: 50px;">Customer <span>Support</span></h1>
+  <section class="support">
+    
+     <div class="support-1">
+         <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DdM000004Tbqx" method="POST">
+             <input type="hidden" name="orgid" value="00DdM000004Tbqx">
+             <input type="hidden" name="retURL" value="https://thankyou-case.netlify.app/">
+             
+             <label for="name">Contact Name</label>
+             <input id="name" maxlength="80" name="name" size="20" type="text" required><br>
+   
+             <label for="email">Email</label>
+             <input id="email" maxlength="80" name="email" size="20" type="email" required><br>
+   
+             <label for="phone">Phone</label>
+             <input id="phone" maxlength="40" name="phone" size="20" type="text"><br>
+   
+             <label for="subject">Subject</label>
+             <input id="subject" maxlength="80" name="subject" size="20" type="text" required><br>
+   
+             <label for="description">Description</label>
+             <textarea id="description" name="description" required></textarea><br>
+   
+             <input type="submit" name="submit" value="Submit" class="btn-2" style="margin-top: -0.5rem; margin-bottom: 1rem; margin-left: 1.5rem;">
+         </form>
+     </div>
+ 
+     <!-- Place the embed code here -->
+     <div class="lottie-container" >
+         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+         <dotlottie-player src="https://lottie.host/4ccb1c66-2510-4282-98ae-ea8a2028ea7d/d9s1FJmKAv.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+     </div>
+ </section>
+ 
+
+
+  <!-- newsletter section -->
+   
+<!-- newsletter section NEW BREVO -->
+<section class="newsletter">
+  <div class="sib-form" style="max-width: 60rem; margin: 0 auto;">
+    <div id="sib-form-container" class="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+            <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+          </svg>
+          <span class="sib-form-message-panel__inner-text">
+            Your subscription could not be saved. Please try again.
+          </span>
+        </div>
+      </div>
+
+      <div id="success-message" class="sib-form-message-panel">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+            <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+          </svg>
+          <span class="sib-form-message-panel__inner-text">
+            Your subscription has been successful.
+          </span>
+        </div>
+      </div>
+      <!-- Subscription Form -->
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align: center; background-color: rgba(255, 255, 255, 1); max-width: 540px; border-radius: 3px; border-width: 1px; border-color: #C0CCD9; border-style: solid; direction: ltr; transition: transform 1s ease;">
+        <form id="sib-form" method="POST" action="https://432e6b44.sibforms.com/serve/MUIFAPKEnF3IBU6pCJamGve51VuNvMLUqRFKUVWp337Q0nek7oIpPtIP0uVammmelLXIxHckJRnrv6b0nGOGyPt-psTq3YmIaGVes5jVly3hNP3tGJ02n1uudrhyRnJ9DQfohifo7L5NXEEaT5FOjLCfu2MAOp7JB0OvPLqYYEh9uVqjJ8A_sY1wPPnJNTH6EP_l57_J8EMvFq0G" data-type="subscription" onsubmit="handleSubmit(event)">
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block" style="font-size: 32px; text-align: left; font-weight: 700; font-family: 'Helvetica', sans-serif; color: #3C4858; background-color: transparent; text-align: left;">
+              <p>Subscribe For Latest Updates</p>
+            </div>
+          </div>
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block" style="font-size: 16px; text-align: left; font-family: 'Helvetica', sans-serif; color: #3C4858; background-color: transparent; text-align: left;">
+              <div class="sib-text-form-block">
+                <p>Subscribe to our newsletter and stay updated.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label" style="font-weight: 700; text-align: left; font-size: 16px; text-align: left; font-weight: 700; font-family: 'Helvetica', sans-serif; color: #3c4858;" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
+                  <div class="entry__field">
+                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required style="width: 100%; padding: 10px; font-size: 16px; color: #000000; border-radius: 3px; border: 1px solid #C0CCD9; text-transform: none;">
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-size: 16px; text-align: left; font-family: 'Helvetica', sans-serif; color: #661d1d; background-color: #f9efef; border-radius: 3px; border-color: #ff4949; padding: 2rem 0;"></label>
+                <label class="entry__specification" style="font-size: 12px; text-align: left; font-family: 'Helvetica', sans-serif; color: #8390A4; text-align: left;">
+                  Provide your email address to subscribe. For example: abc@xyz.com
+                </label>
+              </div>
+            </div>
+          </div>
+          <div style="padding: 8px 0;">
+            <div class="sib-form-block" style="text-align: left;">
+              <button id="subscribeButton" class="sib-form-block__button sib-form-block__button-with-loader" style="font-size: 16px; text-align: left; font-weight: 700; font-family: 'Helvetica', sans-serif; color: #FFFFFF; background-color: #3E4857; border-radius: 3px; border-width: 0px;" type="submit">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                  <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                </svg>
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+
+          <input type="text" name="email_address_check" value="" class="input--hidden">
+          <input type="hidden" name="locale" value="en">
+        </form>
+      </div>
+</section>
+
+
+
+  
+
+   <!-- review section start -->
+    <section class="review" id="reviews">
+      <h1 class="heading" style="padding-top: 50px;">Customer <span>Reviews</span></h1>
+      <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"Excellent service! Found my dream car hassle-free."</p>
+                    <h3>John Doe</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"The parts repair was quick and efficient. Car runs like new!"</p>
+                    <h3>Jane Smith</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"Best car insurance rates I've found. Very happy with the coverage."</p>
+                    <h3>Michael Johnson</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"Prompt oil change service. Professional staff and great results."</p>
+                    <h3>Emily Brown</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"Quick battery replacement service. Car starts reliably now!"</p>
+                    <h3>David Wilson</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"Outstanding 24/7 support. Always ready to assist with any issue."</p>
+                    <h3>Sarah Clark</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="content">
+                    <p>"AutoBazaar exceeded my expectations. Highly recommend!"</p>
+                    <h3>Robert Martinez</h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    </section>
+
+    <!-- contact section starts -->
+     <div class="contact" id="contact">
+        <h1 class="heading" style="padding-top: 50px;"><span>Contact</span> Us!</h1>
+      <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1781.078437710759!2d80.94445186151499!3d26.771268900844724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfb760fd56019%3A0x524ae0cb371907d6!2sGardens%20Galleria%20Mall!5e0!3m2!1sen!2sin!4v1720624437422!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM000004Tbqx" method="POST">
+          <input type="hidden" name="oid" value="00DdM000004Tbqx">
+          <input type="hidden" name="retURL" value="https://thankyou-lead.netlify.app/">
+          
+          <h3 style="font-size: 3rem;">Get in touch</h3>
+          
+          <!-- <label for="first_name">First Name</label> -->
+          <input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="box" placeholder="Name"><br>
+        
+          <!-- <label for="last_name">Last Name</label> -->
+          <input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="box" placeholder="Last Name"><br>
+        
+          <!-- <label for="email">Email</label> -->
+          <input id="email" maxlength="80" name="email" size="20" type="text" class="box" placeholder="Email" style="text-transform: none;"><br>
+        
+          <!-- <label for="phone">Phone</label> -->
+          <input id="phone" maxlength="40" name="phone" size="20" type="text" class="box" placeholder="Phone Number"><br>
+        
+          <!-- <label for="description">Message</label> -->
+          <textarea name="description" class="box" placeholder="Message" cols="30" rows="10" style="text-transform: none;"></textarea><br>
+        
+          <input type="submit" value="Send Message" class="btn-2">
+        </form>
+        
+      </div>
+      </div>
+
+      <!-- footer section starts -->
+       <section class="footer">
+        <div class="box-container">
+          <div class="box" style="padding-left: 2rem;">
+            <h3>our branches</h3>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Delhi</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Mumbai</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Lucknow</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Pune</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Bangaluru</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Ahmedabad</a>
+          </div>
+          <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"><i class="fas fa-arrow-right"></i> home</a>
+            <a href="#vehicles"><i class="fas fa-arrow-right"></i> vehicles</a>
+            <a href="#services"><i class="fas fa-arrow-right"></i> services</a>
+            <a href="#featured"><i class="fas fa-arrow-right"></i> featured</a>
+            <a href="#reviews"><i class="fas fa-arrow-right"></i> reviews</a>
+            <a href="#contact"><i class="fas fa-arrow-right"></i> contact</a>
+          </div>
+          <div class="box">
+            <h3>contact links</h3>
+            <a href="#"><i class="fas fa-phone"></i> +91 989898989</a>
+            <a href="#"><i class="fas fa-phone"></i> +91 797979979</a>
+            <a href="#"><i class="fas fa-envelope"></i> autobazaar@gmail.com</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Lucknow, India - 226025</a>
+          </div>
+          <div class="box">
+            <h3>social media</h3>
+            <a href="#"><i class="fab fa-facebook"></i> facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+            <a href="#"><i class="fab fa-pinterest"></i> pinterest</a>
+          </div>
+        </div>
+
+        <div class="credit"><strong>AutoBazaar</strong> | &copy; 2024 all rights reserved</div>
+
+       </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Custom JS link -->
+    <script src="app.js"></script>
+</body>
+</html>
